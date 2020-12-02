@@ -6,9 +6,17 @@ import ReviewDetails from '../screens/reviewDetails';
 const screens = {
   Home: {
     screen: Home,
+    navigationOptions: {
+      title: 'CalendarManagement',
+      headerStyle: {backgroundColor: '#eee'},
+    },
   },
   ReviewDetails: {
     screen: ReviewDetails,
+    navigationOptions: {
+      title: 'ReviewDetails',
+      headerStyle: {backgroundColor: '#eee'},
+    },
   },
 };
 
