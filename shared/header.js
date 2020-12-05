@@ -1,4 +1,4 @@
-/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     marginVertical: 1,
     backgroundColor: '#333',
     borderRadius: 50,
-    marginHorizontal: 20,
+    marginLeft: 4,
+    right: 60,
   },
 });
