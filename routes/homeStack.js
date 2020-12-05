@@ -1,14 +1,23 @@
+import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
+import Header from '../shared/header';
 
 const screens = {
   Home: {
     screen: Home,
-    navigationOptions: {
-      title: 'CalendarManagement',
-      // headerStyle: {backgroundColor: '#eee'},
+    // navigationOptions: {
+    //   title: 'CalendarManagement',
+    //   // headerStyle: {backgroundColor: '#eee'},
+    // },
+    navigationOptions: ({navigation}) => {
+      return {
+        headerTitle: () => (
+          <Header title="Calender management" navigation={navigation} />
+        ),
+      };
     },
   },
   ReviewDetails: {
