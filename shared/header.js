@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   icon: {
-    width: 35,
-    height: 5,
+    width: 20,
+    height: 2,
     marginVertical: 1,
     backgroundColor: '#333',
     borderRadius: 50,
