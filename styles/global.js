@@ -15,3 +15,13 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
   },
 });
+
+export const images = {
+  ratings: {
+    1: require('../assets/icons/rating-1.png'),
+    2: require('../assets/icons/rating-2.png'),
+    3: require('../assets/icons/rating-3.png'),
+    4: require('../assets/icons/rating-4.png'),
+    5: require('../assets/icons/rating-5.png'),
+  },
+};
