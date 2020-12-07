@@ -1,6 +1,5 @@
-
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 
 export default function Header({title, navigation}) {
   const openMenu = () => {
@@ -14,7 +13,11 @@ export default function Header({title, navigation}) {
         <View style={styles.icon} />
         <View style={styles.icon} />
       </TouchableOpacity>
-      <View>
+      <View style={styles.headerTitle}>
+        <Image
+          source={require('../assets/icons/heart_logo.png')}
+          style={styles.headerImage}
+        />
         <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
@@ -42,6 +45,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#333',
     borderRadius: 50,
     marginLeft: 4,
-    right: 60,
+    right: 50,
+  },
+  headerTitle: {
+    flexDirection: 'row',
+  },
+  headerImage: {
+    width: 26,
+    height: 26,
+    marginHorizontal: 10,
   },
 });
