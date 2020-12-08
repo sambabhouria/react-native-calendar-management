@@ -1,18 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Header({title, navigation}) {
   const openMenu = () => {
     navigation.openDrawer();
   };
-
   return (
-    <View style={styles.header}>
-      <TouchableOpacity onPress={openMenu}>
-        <View style={styles.icon} />
-        <View style={styles.icon} />
-        <View style={styles.icon} />
-      </TouchableOpacity>
+    <ImageBackground
+      source={require('../assets/icons/game_bg.png')}
+      style={styles.header}>
+      <Icon name="bars" size={28} onPress={openMenu} style={styles.icon} />
       <View style={styles.headerTitle}>
         <Image
           source={require('../assets/icons/heart_logo.png')}
@@ -20,7 +18,7 @@ export default function Header({title, navigation}) {
         />
         <Text style={styles.headerText}>{title}</Text>
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -39,13 +37,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   icon: {
-    width: 20,
-    height: 2,
-    marginVertical: 1,
-    backgroundColor: '#333',
-    borderRadius: 50,
-    marginLeft: 4,
-    right: 50,
+    position: 'absolute',
+    left: 1,
   },
   headerTitle: {
     flexDirection: 'row',

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import {globalStyles} from '../styles/global';
 import Card from '../shared/card';
+import {Icon} from 'react-native-elements';
 
 export default function Home({navigation}) {
   const [reviews, setReviews] = useState([

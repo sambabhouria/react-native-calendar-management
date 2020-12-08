@@ -8,6 +8,7 @@ target 'CalenderManagement' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'CalenderManagementTests' do
     inherit! :complete
     # Pods for testing
