@@ -1,5 +1,6 @@
+/* eslint-disable radix */
 import React from 'react';
-import {Button, TextInput, View} from 'react-native';
+import {Button, TextInput, View, Text} from 'react-native';
 import {globalStyles} from '../styles/global.js';
 import {Formik} from 'formik';
 import * as yup from 'yup';
@@ -33,6 +34,10 @@ export default function ReviewForm({addReview}) {
               onChangeText={props.handleChange('title')}
               value={props.values.title}
             />
+            {/* only if the left value is a valid string, will the right value be displayed */}
+            <Text style={globalStyles.errorText}>
+              {props.touched.title && props.errors.title}
+            </Text>
 
             <TextInput
               style={globalStyles.input}
@@ -41,6 +46,9 @@ export default function ReviewForm({addReview}) {
               onChangeText={props.handleChange('body')}
               value={props.values.body}
             />
+            <Text style={globalStyles.errorText}>
+              {props.touched.body && props.errors.body}
+            </Text>
 
             <TextInput
               style={globalStyles.input}
@@ -49,6 +57,9 @@ export default function ReviewForm({addReview}) {
               value={props.values.rating}
               keyboardType="numeric"
             />
+            <Text style={globalStyles.errorText}>
+              {props.touched.rating && props.errors.rating}
+            </Text>
             <Button
               color="maroon"
               title="Submit"
