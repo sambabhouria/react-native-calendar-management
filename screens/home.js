@@ -18,18 +18,35 @@ export default function Home({navigation}) {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
     {
-      title: 'Zelda, Breath of Fresh Air',
+      title: 'Dejeuner d"affaire',
       rating: 5,
-      body: 'lorem ipsum',
+      body: 'Dejeuner  a la defense',
       key: '1',
     },
     {
-      title: 'Gotta Catch Them All (again)',
+      title: 'Jouer au golf avec l"equipe',
       rating: 4,
-      body: 'lorem ipsum',
+      body: 'Aller  jouer au golf avec des amis',
       key: '2',
     },
-    {title: 'Not So "Final" Fantasy', rating: 3, body: 'lorem ipsum', key: '3'},
+    {
+      title: 'Dinner familliale',
+      rating: 3,
+      body: 'Dinner sur les champs avec des amis',
+      key: '3',
+    },
+    {
+      title: 'Sortie nocturne',
+      rating: 2,
+      body: 'aller au duplex pour danser',
+      key: '4',
+    },
+    {
+      title: 'Aller jouer au foot',
+      rating: 1,
+      body: 'jouer tous les dimanches avec des amis',
+      key: '5',
+    },
   ]);
 
   const addReview = (review) => {
